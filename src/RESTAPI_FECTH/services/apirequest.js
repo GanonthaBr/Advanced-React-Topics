@@ -1,3 +1,6 @@
+import axios from "axios";
+
+//FETCH METHOD
 //get all posts
 
 export const getData = async () => {
@@ -48,5 +51,65 @@ export const updatePost = async (id, updatedPost) => {
     return data;
   } catch (err) {
     throw err;
+  }
+};
+
+//GET
+const client = axios.create({
+  //create an axios instance
+  baseURL: "http://localhost:4000/POSTS",
+});
+// export const getInstance = async () => {
+//   const res = client.get().then((data) => data);
+// };
+/**
+ * The function `getInstance` makes an asynchronous request to the `client` and returns the response.
+ * @returns The response from the `client.get()` method is being returned.
+ */
+export const getInstance = async () => {
+  try {
+    const res = await client.get();
+    return res;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+/**
+ * The function uses Axios to send a DELETE request to a specified endpoint with the given ID.
+ * @param id - The `id` parameter is the identifier of the resource that you want to delete. It is used
+ * to specify which resource should be deleted from the server.
+ * @returns The response from the delete request is being returned.
+ */
+export const deletWithAxios = async (id) => {
+  try {
+    const res = await client.delete(`/${id}`);
+    return res;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+//get profile
+const client2 = axios.create({
+  baseURL: `https://jsonplaceholder.typicode.com/users`,
+});
+
+export const getProfile = async () => {
+  try {
+    const res = await client2.get();
+    return res;
+  } catch (err) {
+    console.log(err);
+  }
+};
+//delete person
+
+const removeProfile = async (id) => {
+  try {
+    const res = await client2.delete(`/${id}`);
+    return res;
+  } catch (err) {
+    console.log(err);
   }
 };

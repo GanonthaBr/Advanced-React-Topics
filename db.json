@@ -1,11 +1,11 @@
 {
   "posts": [
     {
-      "id": 1,
+      "title": "deuxième ",
+      "content": "juste pour voir",
       "author": "Bruno",
-      "title": "test",
-      "content": "testing",
-      "color": false
+      "color": false,
+      "id": 3
     }
   ]
 }
