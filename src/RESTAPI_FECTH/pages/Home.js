@@ -1,6 +1,7 @@
 import React from "react";
 import Posts from "./Posts";
 import NewPost from "./NewPost";
+import Profile from "./Profile";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       </div>
       <NewPost />
       <Posts />
+      <Profile />
     </div>
   );
 };
