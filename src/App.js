@@ -12,6 +12,7 @@ import Hoc, {
 import Posts from "./HOC/Posts";
 import { Authorization } from "./HOC/Authorization";
 import HomeReactRouter from "./REACTROUTER/project/HomeReactRouter";
+import GraphQL from "./REACTAPI_GRAPHQL/GraphQL";
 
 function App() {
   const text =
@@ -31,7 +32,8 @@ function App() {
       <InputComponentWithHover type="text" /> */}
       {/* <Posts /> */}
       {/* <Authorization /> */}
-      <HomeReactRouter />
+      {/* <HomeReactRouter /> */}
+      <GraphQL />
     </div>
   );
 }

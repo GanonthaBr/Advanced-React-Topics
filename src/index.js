@@ -14,7 +14,9 @@ import Root, {
 } from "./REACTROUTER/Routes/Root";
 import ErrorPage from "./REACTROUTER/Routes/Error-page";
 import Contact, { loader as contactLoader } from "./REACTROUTER/Routes/contact";
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
+//React Router
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,13 +33,19 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+//CLient API: graphQL
+const client = new ApolloClient({
+  uri: "https://api.spacex.land/graphql/",
+  cache: new InMemoryCache(),
+});
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <ApolloProvider client={client}>
+        <App />
+      </ApolloProvider>
     </BrowserRouter>
-    {/* <RouterProvider router={router} /> */}
   </React.StrictMode>
 );
 
