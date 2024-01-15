@@ -62,10 +62,10 @@ component. */
     getPerson();
   }, [setAppState]);
   //add a new post
-  const addPost = async (post) => {
+  async function addPost(post) {
     const data = await postRequest(post);
     setPost([...posts, data]);
-  };
+  }
   //delete a post
 
   const removePost = async (id) => {
