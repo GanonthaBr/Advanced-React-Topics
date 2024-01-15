@@ -33,7 +33,8 @@ function App() {
       {/* <Posts /> */}
       {/* <Authorization /> */}
       {/* <HomeReactRouter /> */}
-      <GraphQL />
+      {/* <GraphQL /> */}
+      <h1>learn react</h1>
     </div>
   );
 }
