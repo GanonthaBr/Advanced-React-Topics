@@ -13,6 +13,7 @@ import Posts from "./HOC/Posts";
 import { Authorization } from "./HOC/Authorization";
 import HomeReactRouter from "./REACTROUTER/project/HomeReactRouter";
 import GraphQL from "./REACTAPI_GRAPHQL/GraphQL";
+import SimplyLearn from "./REDUX/components/SimplyLearn";
 
 function App() {
   const text =
@@ -35,6 +36,7 @@ function App() {
       {/* <HomeReactRouter /> */}
       {/* <GraphQL /> */}
       <h1>learn react</h1>
+      <SimplyLearn />
     </div>
   );
 }
