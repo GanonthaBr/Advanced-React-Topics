@@ -1,3 +1,4 @@
+import React from "react";
 /**
  * The function `WithListLoading` is a higher-order component that takes a component as an argument and
  * returns a new component that displays a loading message if the `isLoading` prop is true.

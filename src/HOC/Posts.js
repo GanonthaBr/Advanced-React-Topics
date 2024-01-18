@@ -3,6 +3,7 @@
 //create withwrapped component
 
 import { useEffect, useState } from "react";
+import React from "react";
 
 function WithDataFetch(WrappedComponent, fetchData) {
   return function WithWrappedComp(props) {

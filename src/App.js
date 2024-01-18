@@ -14,6 +14,7 @@ import { Authorization } from "./HOC/Authorization";
 import HomeReactRouter from "./REACTROUTER/project/HomeReactRouter";
 import GraphQL from "./REACTAPI_GRAPHQL/GraphQL";
 import SimplyLearn from "./REDUX/components/SimplyLearn";
+import React from "react";
 
 function App() {
   const text =
