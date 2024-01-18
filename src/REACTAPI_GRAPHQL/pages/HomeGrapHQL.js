@@ -10,9 +10,9 @@ const HomeGrapHQL = () => {
     <div>
       <h1>spaceX launches</h1>
       <ul>
-        {data.launchesPast.map((launch) => {
+        {/* {data.launchesPast.map((launch) => {
           <li key={launch.id}>{launch.mission_name}</li>;
-        })}
+        })} */}
       </ul>
     </div>
   );

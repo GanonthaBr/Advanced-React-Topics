@@ -1,3 +1,5 @@
+import React from "react";
+
 function WithAuth(WrappedComponent, checkPermission) {
   return function WithWrappedComp(props) {
     return checkPermission(props) ? (
