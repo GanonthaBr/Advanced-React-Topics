@@ -37,6 +37,7 @@ function App() {
       {/* <HomeReactRouter /> */}
       {/* <GraphQL /> */}
       <h1>learn react</h1>
+      <p>The App itself</p>
       <SimplyLearn />
     </div>
   );

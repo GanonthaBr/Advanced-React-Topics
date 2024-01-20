@@ -15,6 +15,8 @@ import Root, {
 import ErrorPage from "./REACTROUTER/Routes/Error-page";
 import Contact, { loader as contactLoader } from "./REACTROUTER/Routes/contact";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import Provider from "./CONTEXTAPI/component/Provider";
+import { store } from "./REDUX/store";
 
 //React Router
 const router = createBrowserRouter([
@@ -53,7 +55,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ApolloProvider client={client}>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </ApolloProvider>
     </BrowserRouter>
   </React.StrictMode>

@@ -1,31 +1,19 @@
-import React from "react";
-import { useState } from "react";
+import { createSlice } from "@reduxjs/toolkit";
 
-const SimplyLearn = () => {
-  const [msg, setMsg] = useState("Subscribe to my channel");
-  const [flag, setFlag] = useState(0);
+const subscribeSlice = createSlice({
+  name: "channel",
+  initialState: {
+    subscribed: false,
+  },
+  reducers: {
+    subscribe: (state) => {
+      state.subscribed = true;
+    },
+    unSubscribe: (state) => {
+      state.subscribed = false;
+    },
+  },
+});
 
-  //subscribe function
-  const subscribe = () => {
-    setMsg("Thanks for subcribing");
-    setFlag(1);
-  };
-  //unsubscribe
-  const unsubscribe = () => {
-    setMsg("Subscribe to my channel");
-    setFlag(0);
-  };
-  return (
-    <div>
-      <h1>SimplyLearn Component</h1>
-      <p>{msg}</p>
-      {flag ? (
-        <button onClick={unsubscribe}>Click to unsubscribe</button>
-      ) : (
-        <button onClick={subscribe}>Click to subscribe</button>
-      )}
-    </div>
-  );
-};
-
-export default SimplyLearn;
+export const { subscribe, unSubscribe } = subscribeSlice.actions;
+export default subscribeSlice.reducer;
